@@ -57,7 +57,7 @@ PRIXUNIT NOT NULL VARCHAR2(50)
 5. Oui il y a un ordre à respecter, pour la même raison que celle précisé ci-dessus, étant donné qu'il y a des contraintes entre les tables.
 
 ## Exercice 2 : se familiariser avec le schéma HR d'Oracle
-5. On peut voir dans le schéma HR les tables *Departments*, *Employees*, *Countires*, *Jobs*, *Job_History*, *Locations* et *Regions*.
+5. On peut voir dans le schéma HR les tables *Departments*, *Employees*, *Countries*, *Jobs*, *Job_History*, *Locations* et *Regions*.
 6. Voir le fichier ddl.sql
 
 ## Exercice 3 : travailler avec le schéma HR d'Oracle
