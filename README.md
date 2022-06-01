@@ -66,9 +66,9 @@ PRIXUNIT NOT NULL VARCHAR2(50)
 ## Exercice 4 : Modélisation
 
 
-##DAY 2
+## DAY 2
 
-##Exercice 1
+## Exercice 1
 
 set serveroutput on;
 
