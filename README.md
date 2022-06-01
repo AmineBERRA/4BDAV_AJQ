@@ -110,9 +110,12 @@ DBMS_OUTPUT.PUT_LINE('proportion de managers = '||propmanagers||'%');
 
 END;
 
-Exercice 2
+##Exercice 2
+
 SELECT table_name,num_rows FROM all_tables WHERE owner = 'HR';
-Exercice 3
+
+##Exercice 3
+
 DECLARE
 v Vol%ROWTYPE;
 BEGIN
