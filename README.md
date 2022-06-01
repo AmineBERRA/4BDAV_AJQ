@@ -70,6 +70,7 @@ PRIXUNIT NOT NULL VARCHAR2(50)
 
 ## Exercice 1
 
+```
 set serveroutput on;
 
 DECLARE
@@ -87,13 +88,14 @@ propmanagers INTEGER;
 
 BEGIN
 
-SELECT COUNT(*) INTO ncountries FROM countries;
 SELECT COUNT(*) INTO ndepartments FROM departments;
-SELECT COUNT(*) INTO nemployees FROM employees;
-SELECT COUNT(*) INTO njobhistory FROM job_history;
-SELECT COUNT(*) INTO njobs FROM jobs;
-SELECT COUNT(*) INTO nlocations FROM locations;
 SELECT COUNT(*) INTO nregions FROM regions;
+SELECT COUNT(*) INTO ncountries FROM countries;
+SELECT COUNT(*) INTO nlocations FROM locations;
+SELECT COUNT(*) INTO nemployees FROM employees;
+SELECT COUNT(*) INTO njobs FROM jobs;
+SELECT COUNT(*) INTO njobhistory FROM job_history;
+
 
 DBMS_OUTPUT.PUT_LINE('ncountries : '||ncountries||' ndepartments : '||ndepartments||' nemployees : '||nemployees||' njobhistory : '||njobhistory||' njobs : '||njobs||' nlocations : '||nlocations||' nregions : '||nregions);
 
@@ -111,13 +113,17 @@ DBMS_OUTPUT.PUT_LINE('proportion de managers = '||propmanagers||'%');
 
 
 END;
+```
 
 ## Exercice 2
 
+```
 SELECT table_name,num_rows FROM all_tables WHERE owner = 'HR';
+```
 
 ## Exercice 3
 
+```
 DECLARE
 v Vol%ROWTYPE;
 BEGIN
@@ -128,3 +134,4 @@ v.Ville_depart := 'Rome';
 v.Ville_arrivee := 'Paris';
 INSERT INTO vol VALUES v;
 END;
+```
