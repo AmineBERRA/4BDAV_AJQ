@@ -73,27 +73,28 @@ PRIXUNIT NOT NULL VARCHAR2(50)
 set serveroutput on;
 
 DECLARE
-nbcountries INTEGER; -- nb total de pays
-nbdepartments INTEGER; --nb total departement
-nbemployees INTEGER; --nb total employees
-nbjobhistory INTEGER; --nb total job history
-nbjobs INTEGER; -- nb total de jobs
-nblocations INTEGER;
-nbregions INTEGER;
-nbmanager INTEGER; --nombre de manager
-propmanagers INTEGER; -- proportion de manager
+
+ncountries INTEGER;
+ndepartments INTEGER; 
+nemployees INTEGER; 
+njobhistory INTEGER; 
+njobs INTEGER; 
+nlocations INTEGER;
+nregions INTEGER;
+nmanager INTEGER; 
+propmanagers INTEGER; 
 
 BEGIN
 
-SELECT COUNT(*) INTO nbcountries FROM countries;
-SELECT COUNT(*) INTO nbdepartments FROM departments;
-SELECT COUNT(*) INTO nbemployees FROM employees;
-SELECT COUNT(*) INTO nbjobhistory FROM job_history;
-SELECT COUNT(*) INTO nbjobs FROM jobs;
-SELECT COUNT(*) INTO nblocations FROM locations;
-SELECT COUNT(*) INTO nbregions FROM regions;
+SELECT COUNT(*) INTO ncountries FROM countries;
+SELECT COUNT(*) INTO ndepartments FROM departments;
+SELECT COUNT(*) INTO nemployees FROM employees;
+SELECT COUNT(*) INTO njobhistory FROM job_history;
+SELECT COUNT(*) INTO njobs FROM jobs;
+SELECT COUNT(*) INTO nlocations FROM locations;
+SELECT COUNT(*) INTO nregions FROM regions;
 
-DBMS_OUTPUT.PUT_LINE('nbcountries : '||nbcountries||' nbdepartments : '||nbdepartments||' nbemployees : '||nbemployees||' nbjobhistory : '||nbjobhistory||' nbjobs : '||nbjobs||' nblocations : '||nblocations||' nbregions : '||nbregions);
+DBMS_OUTPUT.PUT_LINE('ncountries : '||ncountries||' ndepartments : '||ndepartments||' nemployees : '||nemployees||' njobhistory : '||njobhistory||' njobs : '||njobs||' nlocations : '||nlocations||' nregions : '||nregions);
 
 
 SELECT COUNT(*) INTO nbmanager
@@ -103,7 +104,7 @@ propmanagers := 100 * nbmanager / nbemployees;
 
 
 
-DBMS_OUTPUT.PUT_LINE('nb de managers = '||nbmanager);
+DBMS_OUTPUT.PUT_LINE('nb de managers = '||nmanager);
 DBMS_OUTPUT.PUT_LINE('proportion de managers = '||propmanagers||'%');
 
 
