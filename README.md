@@ -1,13 +1,14 @@
 # 4BDAV_AJQ
 
-Groupe Amine Juan-Lucas Quentin
+Groupe 1: Amine Berra - Juan-Lucas Baltimore -  Quentin Mermaz
 
-## Préparation
+## DAY 1
+### Préparation
 1. Se connecter avec `sqlplus system/oracle`
 2. Créer un utilisateur avec `CREATE USER nomdefamille IDENTIFIED BY password;`
 3. Accorder tous les droits avec `GRANT ALL PRIVILEGES TO nomdefamille;`
 
-## Exercice 1 : Création du schéma
+### Exercice 1 : Création du schéma
 1. Répo crée ici-même
 2. Créer les relations de bases via le script `Database.sql`;
 3. Oui il y a un ordre à respecter dans l'ordre de créations des tables car certaines dépendent d'autres comme la table Pro qui a besoin de la primary key de la table Fou à la création vu qu'elle est utilisé en tant que Foreign Key.
@@ -56,20 +57,21 @@ PRIXUNIT NOT NULL VARCHAR2(50)
 
 5. Oui il y a un ordre à respecter, pour la même raison que celle précisé ci-dessus, étant donné qu'il y a des contraintes entre les tables.
 
-## Exercice 2 : se familiariser avec le schéma HR d'Oracle
+### Exercice 2 : se familiariser avec le schéma HR d'Oracle
 5. On peut voir dans le schéma HR les tables *Departments*, *Employees*, *Countries*, *Jobs*, *Job_History*, *Locations* et *Regions*.
 6. Voir le fichier ddl.sql
 
-## Exercice 3 : travailler avec le schéma HR d'Oracle
+### Exercice 3 : travailler avec le schéma HR d'Oracle
 
 
-## Exercice 4 : Modélisation
+### Exercice 4 : Modélisation
 
 
 ## DAY 2
 
-## Exercice 1
+### Exercice 1
 
+```
 set serveroutput on;
 
 DECLARE
@@ -110,13 +112,17 @@ DBMS_OUTPUT.PUT_LINE('proportion de managers = '||propmanagers||'%');
 
 
 END;
+```
 
-## Exercice 2
+### Exercice 2
 
+```
 SELECT table_name,num_rows FROM all_tables WHERE owner = 'HR';
+```
 
-## Exercice 3
+### Exercice 3
 
+```
 DECLARE
 v Vol%ROWTYPE;
 BEGIN
@@ -127,3 +133,4 @@ v.Ville_depart := 'Rome';
 v.Ville_arrivee := 'Paris';
 INSERT INTO vol VALUES v;
 END;
+```
